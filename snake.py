@@ -29,12 +29,8 @@ def add_food(list_coordinates, food):
             break
 
 def move(list_coordinates, direction_key, food): 
-    directions = {
-    'n': (-1, 0),
-    's': (1, 0),
-    'e': (0, 1),
-    'w': (0, -1)}
     
+    directions = {'n': (-1, 0), 's': (1, 0), 'e': (0, 1),'w': (0, -1)}
     move_side = directions[direction_key]
     last_coordinates = list_coordinates[-1]
     new_coordinates = (last_coordinates[0] + move_side[0], last_coordinates[1] + move_side[1])
